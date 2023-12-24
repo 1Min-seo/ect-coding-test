@@ -26,22 +26,12 @@ public class ex3_2 {
 		
 		int max1=arr[n-1];
 		int max2=arr[n-2];
-		int cnt=0;
-		int sum=0;
 		
-		while(true) {
-			for(int i=0; i<k; i++) {
-				if(cnt==m) break;
-				
-				cnt+=1;
-				sum+=max1;
-			}
-			if(cnt==m) break;
-			cnt+=1;
-			sum+=max2;
-		}
+		int result=0;
+		result=(m/(k+1))*(max1*k+max2)+(m%(k+1))*max1;
 		
-		System.out.println(sum);
+		System.out.println(result);
+		
 	}
 }
 
@@ -57,13 +47,17 @@ public class ex3_2 {
  * 2 4 5 4 6
  * 
  * 6 5 4 4 2
- * 6+6+6+5+6+6+6+5
+ * (6+6+6+5)+(6+6+6+5)
  * 
  * (2)
  * 5	7	2
  * 3 4 3 4 3
  * 
  * 4 4 3 3 3
- * 4+4+4+4+4+4+4
+ * (4+4+4)+(4+4+4)+4
+ * 
+ * 
+ * result= (m/(k+1))*(max1*k+max2)
+ * + max1*(m%(k+1)) 
  * 
 */
