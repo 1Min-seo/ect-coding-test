@@ -8,7 +8,7 @@ import java.util.StringTokenizer;
 public class ex7_5 {
 	static int binarySearch(int []a,int target) {
 		int start=0;
-		int end=a.length;
+		int end=a[a.length-1];
 		
 		while(start<= end) {
 			int mid=(start+end)/2;
